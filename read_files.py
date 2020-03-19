@@ -24,17 +24,7 @@ import pandas as pd
 def load_dataset(file_name):
     data = pd.read_csv(open(file_name),sep= ',', index_col=0)
     
+    
     return data	
      
 #======================================================================================
-
-"""
-	Function that loads same columns for model construction
-
-	Args:
-        One csv file
-
-    	Returns:
-        One Pandas Dataframe
- """
-
