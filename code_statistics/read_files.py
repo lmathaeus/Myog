@@ -21,18 +21,23 @@ import pandas as pd
         One Pandas Dataframe
  """
 
-class Read_files(object): 
+class Read_files:
     
     
     
-    def __init__(self, val1):
-        self.val1 = val1
-        
-        
-    def read_data(self, file):
-       self.file = file
-       df = pd.read_csv(file, sep=',',index_col=0)
-       print(df)
+    def __init__(self, file):
+        self.file = file
+
+
+    def read_cliente(self):
+        df =  pd.read_csv(self.file, sep=',',index_col=0)
+        samples = df.head()
+        print('Informações iniciais sobre o Dataset: \n\n', df)
+        print('\n Quantidade por sexo: \n', df.gender.value_counts())
+
+    def read_product(self):
+        pass
+
         
      
 #======================================================================================
