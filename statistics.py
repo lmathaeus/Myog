@@ -34,3 +34,25 @@ class Statistics(object):
 
 
 
+####################################################################################
+
+
+def Categoria_filho(self):
+    df = pd.read_csv(self.file, sep=',', index_col=0)
+    print('Informações sobre a categoria filho: \n\n', df)
+    print('\n Quantidade por catogoria filho: \n', df.child_category_name.value_counts().plot(kind='bar'))
+
+def Categoria_pai(self):
+    df = pd.read_csv(self.file, sep=',', index_col=0)
+    print('Informações sobre a categoria pai: \n\n', df)
+    print('\n Quantidade por catogoria pai: \n', df.parent_category_name.value_counts().plot(kind='bar'))
+
+def Produtos(self):
+    df = pd.read_csv(self.file, sep=',', index_col=0)
+    print('Informações sobre os produtos: \n\n', df)
+    a = df.groupby(by='product_name')['customer_id'].count()
+    print('\n Quantidade de da categoria filho mais vendida: \n',a.sort_values(ascending=False).plot(kind='barh',subplots=True))
+    print('Os produtos mais vendidos: \n\n')
+    print('\n mais vendidos: \n',product_name.value_counts().plot(kind='barh'))
+
+
