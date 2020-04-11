@@ -12,28 +12,31 @@ from statistics import Statistics
 import pandas as pd
 
 
+
 # Informations about Dataset
 # ===========================================================================
 # Criando o objeto da classe Read_files
 df = Read_files('/home/clayton/Dropbox/Lucas/Datasets/Dados_clientes.csv')
-new = df
 
+print(df.read_cliente())
 
-
-
-
-
+#date = pd.to_datetime(df.read_cliente.birthdate)
+#print(date)
+#print(datetime.apply(df.calculate_age()))
+'''
 # ============================================================================
 # Objeto values da classe Statistics
-values = Statistics(new)
+values = Statistics(df)
 
-print(new.gender)
+print(values.amount_client(df.read_cliente()))
+
+
 
 # Quantidade de indivíduos por sexo
 set = values.amount_client(df.gender.value_counts())
 print('\nIndivíduos divididos por sexo: \n', set)
 
-'''
+
 # Encoder, neste caso, para sexo
 enc = values.encoder(df['gender'])
 print('\nValores do encoder para sexo: ',enc)
