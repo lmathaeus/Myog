@@ -7,7 +7,7 @@ Created on Thu Mar  5 17:23:51 2020
 
 """
 
-from read_files import Read_files
+from read_files import Read_files_client
 from statistics import Statistics
 import pandas as pd
 
@@ -20,10 +20,6 @@ df = Read_files('/home/clayton/Dropbox/Lucas/Datasets/Dados_clientes.csv')
 
 print(df.read_cliente())
 
-#date = pd.to_datetime(df.read_cliente.birthdate)
-#print(date)
-#print(datetime.apply(df.calculate_age()))
-'''
 # ============================================================================
 # Objeto values da classe Statistics
 values = Statistics(df)
@@ -31,7 +27,7 @@ values = Statistics(df)
 print(values.amount_client(df.read_cliente()))
 
 
-
+'''
 # Quantidade de indivíduos por sexo
 set = values.amount_client(df.gender.value_counts())
 print('\nIndivíduos divididos por sexo: \n', set)

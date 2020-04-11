@@ -23,7 +23,7 @@ from sklearn.preprocessing import LabelEncoder
         One Pandas Dataframe
  """
 
-class Read_files:
+class Read_files_client:
     """ Apresenta informações sobre o conjunto de dados Clientes """
     
     
